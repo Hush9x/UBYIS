@@ -17,7 +17,7 @@ cards.forEach(card => {
 });
 
 document.getElementById("card").addEventListener("click", function() {
-    window.location.pathname = "games.html";
+    window.location.pathname = "ALLG.html";
 });
 
 document.getElementById("card2").addEventListener("click", function() {

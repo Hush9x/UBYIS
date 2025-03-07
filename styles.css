@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/bg.png");
+    background-size: cover; 
+    background-position: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    perspective: 700px;
+}
+
+.card {
+    width: 160px;
+    height: 145px;
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease-out, box-shadow 0.1s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    transform-style: preserve-3d;
+    border-color: white;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+}
+
+.card span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+.card:hover {
+    box-shadow: 0 12px 35px rgba(255, 0, 0, 0.6);
+    opacity: 0.8;
+}
+
+.card:hover::before {
+    opacity: 0.4;
+}
+
+.titletext {
+    perspective: 700px;
+    transform-style: preserve-3d;
+    color: rgb(255, 0, 0);
+    font-family: "Press Start 2P", serif;
+    font-size: 15vh;
+    text-align: center;
+
+    position: absolute;
+    left: 50%;
+    top: 25vh;
+    transform: translateX(-50%);
+}

@@ -1,6 +1,3 @@
-alert("Welcome!")
-alert("This is option one, if you do not like it I MUST & WILL change it to your liking, like making the background a Gif not an image!")
-
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
